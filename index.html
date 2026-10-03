@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI BOS · Business Operations System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">BOS</div>
+      <div><b>AI BOS</b><small>Business Operations System</small></div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="foot">
+      <div class="lifecycle"><span>SENSE</span><span>PLAN</span><span>SIMULATE</span><span>APPROVE</span><span>ACT</span><span>LEARN</span></div>
+      <div style="margin-top:10px">Synthetic demo data · v0.1 prototype</div>
+      <button class="btn sm" style="margin-top:8px;background:#1f2937;color:#cbd2e1;border-color:#374151" onclick="resetDemo()">↺ Reset demo</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="title">Planning Canvas</h1>
+        <div class="sub" id="subtitle"></div>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn gold" onclick="startTour()">▶ Guided demo</button>
+      <label class="pill-select">Profile
+        <select id="profileSel"></select>
+      </label>
+      <label class="pill-select">Season
+        <select id="seasonSel"></select>
+      </label>
+      <label class="pill-select">Role
+        <select id="roleSel"></select>
+      </label>
+    </header>
+    <section class="content" id="content"></section>
+  </main>
+</div>
+<div class="toast-wrap" id="toasts"></div>
+<script src="app.js"></script>
+</body>
+</html>
