@@ -58,3 +58,12 @@ Use **Reset demo** in the sidebar to start over.
 - All data is synthetic, counterfactuals are estimates and root causes are hypotheses.
 - The copilot is a deterministic intent parser that calls the real simulator and optimizer functions in `app.js`. Every number comes from those tools and is never made up. To swap in an LLM with tool calling (e.g. Claude), give it the same functions as tools: `simulate`, `optimize`, `check_constraints`, `find_conflicts`, `suggest_transfer`, `draft_copy`.
 - The AI writes only to a draft layer and cannot approve or publish. Every action is recorded in the audit log.
+
+## Backend
+
+A FastAPI backend with an open-source LLM copilot (Ollama or Groq) lives in [`backend/`](backend/README.md). Quick start:
+
+```bash
+cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/uvicorn app.main:app --port 8000
+```
